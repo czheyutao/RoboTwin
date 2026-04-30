@@ -1,0 +1,3 @@
+[submodule "third_party/FastWAM"]
+	path = third_party/FastWAM
+	url = https://github.com/yuantianyuan01/FastWAM.git
