@@ -1,0 +1,167 @@
+{
+  "overall_success_rate": 0.834,
+  "eval_num_episodes": 50,
+  "source_runs": {
+    "subset_first3": "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset/robotwin_uncond_3cam_384/20260428_213615",
+    "parallel_last7": "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset_parallel/robotwin_uncond_3cam_384/20260429_104543"
+  },
+  "tasks": [
+    {
+      "task_name": "blocks_ranking_rgb",
+      "success_rate": 1.0,
+      "status": "ok",
+      "error": "",
+      "result_file": "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset_merged/robotwin_uncond_3cam_384/20260430_merged_from_subset_and_parallel/blocks_ranking_rgb/_result_random.txt",
+      "log_files": [
+        "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset_merged/robotwin_uncond_3cam_384/20260430_merged_from_subset_and_parallel/blocks_ranking_rgb/eval_blocks_ranking_rgb_demo_randomized_20260429_121912.log",
+        "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset_merged/robotwin_uncond_3cam_384/20260430_merged_from_subset_and_parallel/blocks_ranking_rgb/manual_blocks_ranking_rgb_gpu5_20260429_121911.log"
+      ],
+      "source_run_dir": "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset_parallel/robotwin_uncond_3cam_384/20260429_104543",
+      "instruction_type": "unseen",
+      "result_timestamp": "20260429_121933",
+      "metric": "success_rate",
+      "eval_num_episodes": 50
+    },
+    {
+      "task_name": "blocks_ranking_size",
+      "success_rate": 0.96,
+      "status": "ok",
+      "error": "",
+      "result_file": "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset_merged/robotwin_uncond_3cam_384/20260430_merged_from_subset_and_parallel/blocks_ranking_size/_result_random.txt",
+      "log_files": [
+        "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset_merged/robotwin_uncond_3cam_384/20260430_merged_from_subset_and_parallel/blocks_ranking_size/eval_blocks_ranking_size_demo_randomized_20260429_121912.log",
+        "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset_merged/robotwin_uncond_3cam_384/20260430_merged_from_subset_and_parallel/blocks_ranking_size/manual_blocks_ranking_size_gpu6_20260429_121911.log"
+      ],
+      "source_run_dir": "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset_parallel/robotwin_uncond_3cam_384/20260429_104543",
+      "instruction_type": "unseen",
+      "result_timestamp": "20260429_121933",
+      "metric": "success_rate",
+      "eval_num_episodes": 50
+    },
+    {
+      "task_name": "handover_mic",
+      "success_rate": 1.0,
+      "status": "ok",
+      "error": "",
+      "result_file": "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset_merged/robotwin_uncond_3cam_384/20260430_merged_from_subset_and_parallel/handover_mic/_result_random.txt",
+      "log_files": [
+        "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset_merged/robotwin_uncond_3cam_384/20260430_merged_from_subset_and_parallel/handover_mic/eval_handover_mic_demo_randomized_20260428_234505.log"
+      ],
+      "source_run_dir": "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset/robotwin_uncond_3cam_384/20260428_213615",
+      "instruction_type": "unseen",
+      "result_timestamp": "20260428_234518",
+      "metric": "success_rate",
+      "eval_num_episodes": 50
+    },
+    {
+      "task_name": "move_can_pot",
+      "success_rate": 0.98,
+      "status": "ok",
+      "error": "",
+      "result_file": "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset_merged/robotwin_uncond_3cam_384/20260430_merged_from_subset_and_parallel/move_can_pot/_result_random.txt",
+      "log_files": [
+        "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset_merged/robotwin_uncond_3cam_384/20260430_merged_from_subset_and_parallel/move_can_pot/eval_move_can_pot_demo_randomized_20260429_104544.log",
+        "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset_merged/robotwin_uncond_3cam_384/20260430_merged_from_subset_and_parallel/move_can_pot/parallel_worker_move_can_pot_20260429_104544.log"
+      ],
+      "source_run_dir": "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset_parallel/robotwin_uncond_3cam_384/20260429_104543",
+      "instruction_type": "unseen",
+      "result_timestamp": "20260429_104627",
+      "metric": "success_rate",
+      "eval_num_episodes": 50
+    },
+    {
+      "task_name": "move_stapler_pad",
+      "success_rate": 0.7,
+      "status": "ok",
+      "error": "",
+      "result_file": "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset_merged/robotwin_uncond_3cam_384/20260430_merged_from_subset_and_parallel/move_stapler_pad/_result_random.txt",
+      "log_files": [
+        "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset_merged/robotwin_uncond_3cam_384/20260430_merged_from_subset_and_parallel/move_stapler_pad/eval_move_stapler_pad_demo_randomized_20260428_213615.log"
+      ],
+      "source_run_dir": "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset/robotwin_uncond_3cam_384/20260428_213615",
+      "instruction_type": "unseen",
+      "result_timestamp": "20260428_213631",
+      "metric": "success_rate",
+      "eval_num_episodes": 50
+    },
+    {
+      "task_name": "open_microwave",
+      "success_rate": 0.28,
+      "status": "ok",
+      "error": "",
+      "result_file": "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset_merged/robotwin_uncond_3cam_384/20260430_merged_from_subset_and_parallel/open_microwave/_result_random.txt",
+      "log_files": [
+        "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset_merged/robotwin_uncond_3cam_384/20260430_merged_from_subset_and_parallel/open_microwave/eval_open_microwave_demo_randomized_20260429_104544.log",
+        "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset_merged/robotwin_uncond_3cam_384/20260430_merged_from_subset_and_parallel/open_microwave/parallel_worker_open_microwave_20260429_104544.log"
+      ],
+      "source_run_dir": "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset_parallel/robotwin_uncond_3cam_384/20260429_104543",
+      "instruction_type": "unseen",
+      "result_timestamp": "20260429_104627",
+      "metric": "success_rate",
+      "eval_num_episodes": 50
+    },
+    {
+      "task_name": "place_can_basket",
+      "success_rate": 0.62,
+      "status": "ok",
+      "error": "",
+      "result_file": "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset_merged/robotwin_uncond_3cam_384/20260430_merged_from_subset_and_parallel/place_can_basket/_result_random.txt",
+      "log_files": [
+        "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset_merged/robotwin_uncond_3cam_384/20260430_merged_from_subset_and_parallel/place_can_basket/eval_place_can_basket_demo_randomized_20260429_104544.log",
+        "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset_merged/robotwin_uncond_3cam_384/20260430_merged_from_subset_and_parallel/place_can_basket/parallel_worker_place_can_basket_20260429_104544.log"
+      ],
+      "source_run_dir": "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset_parallel/robotwin_uncond_3cam_384/20260429_104543",
+      "instruction_type": "unseen",
+      "result_timestamp": "20260429_104628",
+      "metric": "success_rate",
+      "eval_num_episodes": 50
+    },
+    {
+      "task_name": "place_dual_shoes",
+      "success_rate": 0.9,
+      "status": "ok",
+      "error": "",
+      "result_file": "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset_merged/robotwin_uncond_3cam_384/20260430_merged_from_subset_and_parallel/place_dual_shoes/_result_random.txt",
+      "log_files": [
+        "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset_merged/robotwin_uncond_3cam_384/20260430_merged_from_subset_and_parallel/place_dual_shoes/eval_place_dual_shoes_demo_randomized_20260429_104544.log",
+        "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset_merged/robotwin_uncond_3cam_384/20260430_merged_from_subset_and_parallel/place_dual_shoes/parallel_worker_place_dual_shoes_20260429_104544.log"
+      ],
+      "source_run_dir": "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset_parallel/robotwin_uncond_3cam_384/20260429_104543",
+      "instruction_type": "unseen",
+      "result_timestamp": "20260429_104627",
+      "metric": "success_rate",
+      "eval_num_episodes": 50
+    },
+    {
+      "task_name": "place_fan",
+      "success_rate": 0.96,
+      "status": "ok",
+      "error": "",
+      "result_file": "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset_merged/robotwin_uncond_3cam_384/20260430_merged_from_subset_and_parallel/place_fan/_result_random.txt",
+      "log_files": [
+        "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset_merged/robotwin_uncond_3cam_384/20260430_merged_from_subset_and_parallel/place_fan/eval_place_fan_demo_randomized_20260428_224428.log"
+      ],
+      "source_run_dir": "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset/robotwin_uncond_3cam_384/20260428_213615",
+      "instruction_type": "unseen",
+      "result_timestamp": "20260428_224441",
+      "metric": "success_rate",
+      "eval_num_episodes": 50
+    },
+    {
+      "task_name": "stack_blocks_three",
+      "success_rate": 0.94,
+      "status": "ok",
+      "error": "",
+      "result_file": "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset_merged/robotwin_uncond_3cam_384/20260430_merged_from_subset_and_parallel/stack_blocks_three/_result_random.txt",
+      "log_files": [
+        "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset_merged/robotwin_uncond_3cam_384/20260430_merged_from_subset_and_parallel/stack_blocks_three/eval_stack_blocks_three_demo_randomized_20260429_121912.log",
+        "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset_merged/robotwin_uncond_3cam_384/20260430_merged_from_subset_and_parallel/stack_blocks_three/manual_stack_blocks_three_gpu4_20260429_121911.log"
+      ],
+      "source_run_dir": "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset_parallel/robotwin_uncond_3cam_384/20260429_104543",
+      "instruction_type": "unseen",
+      "result_timestamp": "20260429_121933",
+      "metric": "success_rate",
+      "eval_num_episodes": 50
+    }
+  ]
+}
