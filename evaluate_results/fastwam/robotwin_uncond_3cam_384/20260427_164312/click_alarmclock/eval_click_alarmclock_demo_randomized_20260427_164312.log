@@ -1,0 +1,64 @@
+/data/hyt/anaconda3/envs/fastwam_robotwin/lib/python3.10/site-packages/sapien/__init__.py:2: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+[32mRender Well[0m
+============= Config =============
+
+[95mMessy Table:[0m True
+[95mRandom Background:[0m True
+ - Clean Background Rate: 0.02
+[95mRandom Light:[0m True
+ - Crazy Random Light Rate: 0.02
+[95mRandom Table Height:[0m 0.03
+[95mRandom Head Camera Distance:[0m 0
+[94mHead Camera Config:[0m D435, True
+[94mWrist Camera Config:[0m D435, True
+[94mEmbodiment Config:[0m aloha-agilex
+
+==================================
+[INFO] [fastwam.models.wan22.helpers.loader] Loading Wan2.2-TI2V-5B components...
+[INFO] [fastwam.models.wan22.helpers.loader] Skipping pretrained video DiT load (`skip_dit_load_from_pretrain=True`); initializing video expert randomly and expecting checkpoint override.
+[INFO] [fastwam.models.wan22.helpers.loader] Finished loading Wan2.2-TI2V-5B components in 80.63 seconds.
+[INFO] [fastwam.models.wan22.action_dit] Skipping ActionDiT pretrained load (`skip_dit_load_from_pretrain=True`); initializing action expert randomly and expecting checkpoint override.
+[INFO] [fastwam.models.wan22.mot] Initialized MoT with experts: ['video', 'action'], num_layers=30
+[INFO] [fastwam.models.wan22.mot]   Expert 'video': num_params=5.00 B
+[INFO] [fastwam.models.wan22.mot]   Expert 'action': num_params=1.02 B
+[34mTask Name: click_alarmclock[0m
+[34mPolicy Name: fastwam_policy[0m
+Warp DeprecationWarning: The symbol `warp.torch.device_from_torch` will soon be removed from the public API. Use `warp.device_from_torch` instead.
+Traceback (most recent call last):
+  File "/data/hyt/RoboTwin/script/eval_policy.py", line 447, in <module>
+    main(usr_args)
+  File "/data/hyt/RoboTwin/script/eval_policy.py", line 211, in main
+    st_seed, suc_num = eval_policy(task_name,
+  File "/data/hyt/RoboTwin/script/eval_policy.py", line 372, in eval_policy
+    eval_func(TASK_ENV, model, observation)
+  File "/data/hyt/RoboTwin/./policy/fastwam_policy/deploy_policy.py", line 486, in eval
+    model.step(TASK_ENV, obs)
+  File "/data/hyt/RoboTwin/./policy/fastwam_policy/deploy_policy.py", line 374, in step
+    self._fill_action_queue(observation=observation, instruction=instruction)
+  File "/data/hyt/RoboTwin/./policy/fastwam_policy/deploy_policy.py", line 358, in _fill_action_queue
+    action_chunk = self._infer_action_chunk(observation=observation, instruction=instruction)
+  File "/data/hyt/RoboTwin/./policy/fastwam_policy/deploy_policy.py", line 349, in _infer_action_chunk
+    pred = self.model.infer_action(**infer_kwargs)
+  File "/data/hyt/anaconda3/envs/fastwam_robotwin/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/data/hyt/RoboTwin/third_party/FastWAM/src/fastwam/models/wan22/fastwam.py", line 972, in infer_action
+    context, context_mask = self.encode_prompt(prompt)
+  File "/data/hyt/RoboTwin/./policy/fastwam_policy/deploy_policy.py", line 260, in encode_prompt_with_offload
+    _module_to(model_self.text_encoder, target_device, model_dtype)
+  File "/data/hyt/RoboTwin/./policy/fastwam_policy/deploy_policy.py", line 161, in _module_to
+    module.to(device=device, dtype=dtype)
+  File "/data/hyt/anaconda3/envs/fastwam_robotwin/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1355, in to
+    return self._apply(convert)
+  File "/data/hyt/anaconda3/envs/fastwam_robotwin/lib/python3.10/site-packages/torch/nn/modules/module.py", line 915, in _apply
+    module._apply(fn)
+  File "/data/hyt/anaconda3/envs/fastwam_robotwin/lib/python3.10/site-packages/torch/nn/modules/module.py", line 915, in _apply
+    module._apply(fn)
+  File "/data/hyt/anaconda3/envs/fastwam_robotwin/lib/python3.10/site-packages/torch/nn/modules/module.py", line 915, in _apply
+    module._apply(fn)
+  [Previous line repeated 1 more time]
+  File "/data/hyt/anaconda3/envs/fastwam_robotwin/lib/python3.10/site-packages/torch/nn/modules/module.py", line 942, in _apply
+    param_applied = fn(param)
+  File "/data/hyt/anaconda3/envs/fastwam_robotwin/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1341, in convert
+    return t.to(
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 32.00 MiB. GPU 0 has a total capacity of 23.57 GiB of which 18.81 MiB is free. Including non-PyTorch memory, this process has 23.54 GiB memory in use. Of the allocated memory 20.72 GiB is allocated by PyTorch, with 79.29 MiB allocated in private pools (e.g., CUDA Graphs), and 98.43 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

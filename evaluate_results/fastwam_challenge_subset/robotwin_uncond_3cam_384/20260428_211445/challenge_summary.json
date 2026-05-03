@@ -1,0 +1,106 @@
+{
+  "overall_challenge_score": null,
+  "eval_num_episodes": 50,
+  "tasks": [
+    {
+      "task_name": "move_stapler_pad",
+      "challenge_score": null,
+      "status": "dry_run",
+      "error": "",
+      "result_file": "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset/robotwin_uncond_3cam_384/20260428_211445/move_stapler_pad/_result_random.txt",
+      "log_file": "",
+      "scoring_rule": "完成任务即得到 100% 得分",
+      "eval_num_episodes": 50
+    },
+    {
+      "task_name": "place_fan",
+      "challenge_score": null,
+      "status": "dry_run",
+      "error": "",
+      "result_file": "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset/robotwin_uncond_3cam_384/20260428_211445/place_fan/_result_random.txt",
+      "log_file": "",
+      "scoring_rule": "放置成功即得到 100% 得分",
+      "eval_num_episodes": 50
+    },
+    {
+      "task_name": "handover_mic",
+      "challenge_score": null,
+      "status": "dry_run",
+      "error": "",
+      "result_file": "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset/robotwin_uncond_3cam_384/20260428_211445/handover_mic/_result_random.txt",
+      "log_file": "",
+      "scoring_rule": "完成 handover 动作即得到 100% 得分",
+      "eval_num_episodes": 50
+    },
+    {
+      "task_name": "open_microwave",
+      "challenge_score": null,
+      "status": "dry_run",
+      "error": "",
+      "result_file": "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset/robotwin_uncond_3cam_384/20260428_211445/open_microwave/_result_random.txt",
+      "log_file": "",
+      "scoring_rule": "完成任务得到 100% 得分",
+      "eval_num_episodes": 50
+    },
+    {
+      "task_name": "place_can_basket",
+      "challenge_score": null,
+      "status": "dry_run",
+      "error": "",
+      "result_file": "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset/robotwin_uncond_3cam_384/20260428_211445/place_can_basket/_result_random.txt",
+      "log_file": "",
+      "scoring_rule": "完成任务即得到 100% 得分",
+      "eval_num_episodes": 50
+    },
+    {
+      "task_name": "place_dual_shoes",
+      "challenge_score": null,
+      "status": "dry_run",
+      "error": "",
+      "result_file": "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset/robotwin_uncond_3cam_384/20260428_211445/place_dual_shoes/_result_random.txt",
+      "log_file": "",
+      "scoring_rule": "完成任务即得到 100% 得分",
+      "eval_num_episodes": 50
+    },
+    {
+      "task_name": "move_can_pot",
+      "challenge_score": null,
+      "status": "dry_run",
+      "error": "",
+      "result_file": "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset/robotwin_uncond_3cam_384/20260428_211445/move_can_pot/_result_random.txt",
+      "log_file": "",
+      "scoring_rule": "完成任务得到 100% 得分",
+      "eval_num_episodes": 50
+    },
+    {
+      "task_name": "stack_blocks_three",
+      "challenge_score": null,
+      "status": "dry_run",
+      "error": "",
+      "result_file": "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset/robotwin_uncond_3cam_384/20260428_211445/stack_blocks_three/_result_random.txt",
+      "log_file": "",
+      "scoring_rule": "完成第一个堆叠得到 40%，完成任务得到 100%",
+      "eval_num_episodes": 50
+    },
+    {
+      "task_name": "blocks_ranking_rgb",
+      "challenge_score": null,
+      "status": "dry_run",
+      "error": "",
+      "result_file": "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset/robotwin_uncond_3cam_384/20260428_211445/blocks_ranking_rgb/_result_random.txt",
+      "log_file": "",
+      "scoring_rule": "完成第一个物块摆放 20%，第二个 60%，第三个 100%",
+      "eval_num_episodes": 50
+    },
+    {
+      "task_name": "blocks_ranking_size",
+      "challenge_score": null,
+      "status": "dry_run",
+      "error": "",
+      "result_file": "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset/robotwin_uncond_3cam_384/20260428_211445/blocks_ranking_size/_result_random.txt",
+      "log_file": "",
+      "scoring_rule": "完成第一个物块摆放 20%，第二个 60%，第三个 100%",
+      "eval_num_episodes": 50
+    }
+  ]
+}

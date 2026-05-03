@@ -1,3 +1,13 @@
+"""
+脚本作用：定义三积木堆叠任务，并提供挑战评测所需的部分得分规则。
+执行命令示例：
+python script/eval_fastwam_challenge_subset.py \
+  --ckpt third_party/FastWAM/checkpoints/fastwam_release/robotwin_uncond_3cam_384.pt \
+  --dataset-stats-path third_party/FastWAM/checkpoints/fastwam_release/robotwin_uncond_3cam_384_dataset_stats.json \
+  --eval-num-episodes 50 \
+  --gpu-id 0
+"""
+
 from ._base_task import Base_Task
 from .utils import *
 import sapien
@@ -128,3 +138,13 @@ class stack_blocks_three(Base_Task):
         return (np.all(abs(block2_pose - np.array(block1_pose[:2].tolist() + [block1_pose[2] + 0.05])) < eps)
                 and np.all(abs(block3_pose - np.array(block2_pose[:2].tolist() + [block2_pose[2] + 0.05])) < eps)
                 and self.is_left_gripper_open() and self.is_right_gripper_open())
+
+    def get_eval_score(self):
+        if self.check_success():
+            return 1.0
+
+        block1_pose = self.block1.get_pose().p
+        block2_pose = self.block2.get_pose().p
+        eps = [0.025, 0.025, 0.012]
+        first_stack_done = np.all(abs(block2_pose - np.array(block1_pose[:2].tolist() + [block1_pose[2] + 0.05])) < eps)
+        return 0.4 if first_stack_done else 0.0

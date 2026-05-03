@@ -1,0 +1,12 @@
+task_name,success_rate,status,result_file,log_file,scoring_rule
+move_stapler_pad,,dry_run,/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset/robotwin_uncond_3cam_384/20260428_213610/move_stapler_pad/_result_random.txt,,RoboTwin 原始 check_success 二值成功率
+place_fan,,dry_run,/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset/robotwin_uncond_3cam_384/20260428_213610/place_fan/_result_random.txt,,RoboTwin 原始 check_success 二值成功率
+handover_mic,,dry_run,/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset/robotwin_uncond_3cam_384/20260428_213610/handover_mic/_result_random.txt,,RoboTwin 原始 check_success 二值成功率
+open_microwave,,dry_run,/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset/robotwin_uncond_3cam_384/20260428_213610/open_microwave/_result_random.txt,,RoboTwin 原始 check_success 二值成功率
+place_can_basket,,dry_run,/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset/robotwin_uncond_3cam_384/20260428_213610/place_can_basket/_result_random.txt,,RoboTwin 原始 check_success 二值成功率
+place_dual_shoes,,dry_run,/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset/robotwin_uncond_3cam_384/20260428_213610/place_dual_shoes/_result_random.txt,,RoboTwin 原始 check_success 二值成功率
+move_can_pot,,dry_run,/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset/robotwin_uncond_3cam_384/20260428_213610/move_can_pot/_result_random.txt,,RoboTwin 原始 check_success 二值成功率
+stack_blocks_three,,dry_run,/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset/robotwin_uncond_3cam_384/20260428_213610/stack_blocks_three/_result_random.txt,,RoboTwin 原始 check_success 二值成功率
+blocks_ranking_rgb,,dry_run,/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset/robotwin_uncond_3cam_384/20260428_213610/blocks_ranking_rgb/_result_random.txt,,RoboTwin 原始 check_success 二值成功率
+blocks_ranking_size,,dry_run,/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset/robotwin_uncond_3cam_384/20260428_213610/blocks_ranking_size/_result_random.txt,,RoboTwin 原始 check_success 二值成功率
+__overall__,,,,,

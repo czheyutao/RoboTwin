@@ -1,0 +1,36 @@
+{
+  "overall_success_rate": 0.8866666666666667,
+  "eval_num_episodes": 50,
+  "tasks": [
+    {
+      "task_name": "move_stapler_pad",
+      "success_rate": 0.7,
+      "status": "ok",
+      "error": "",
+      "result_file": "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset/robotwin_uncond_3cam_384/20260428_213615/move_stapler_pad/_result_random.txt",
+      "log_file": "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset/robotwin_uncond_3cam_384/20260428_213615/move_stapler_pad/eval_move_stapler_pad_demo_randomized_20260428_213615.log",
+      "scoring_rule": "RoboTwin 原始 check_success 二值成功率",
+      "eval_num_episodes": 50
+    },
+    {
+      "task_name": "place_fan",
+      "success_rate": 0.96,
+      "status": "ok",
+      "error": "",
+      "result_file": "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset/robotwin_uncond_3cam_384/20260428_213615/place_fan/_result_random.txt",
+      "log_file": "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset/robotwin_uncond_3cam_384/20260428_213615/place_fan/eval_place_fan_demo_randomized_20260428_224428.log",
+      "scoring_rule": "RoboTwin 原始 check_success 二值成功率",
+      "eval_num_episodes": 50
+    },
+    {
+      "task_name": "handover_mic",
+      "success_rate": 1.0,
+      "status": "ok",
+      "error": "",
+      "result_file": "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset/robotwin_uncond_3cam_384/20260428_213615/handover_mic/_result_random.txt",
+      "log_file": "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset/robotwin_uncond_3cam_384/20260428_213615/handover_mic/eval_handover_mic_demo_randomized_20260428_234505.log",
+      "scoring_rule": "RoboTwin 原始 check_success 二值成功率",
+      "eval_num_episodes": 50
+    }
+  ]
+}

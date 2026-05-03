@@ -1,0 +1,13 @@
+{
+  "per_task": [
+    {
+      "task_name": "place_fan",
+      "clean_success_rate": null,
+      "random_success_rate": 1.0
+    }
+  ],
+  "overall": {
+    "clean_mean_success_rate": null,
+    "random_mean_success_rate": 1.0
+  }
+}

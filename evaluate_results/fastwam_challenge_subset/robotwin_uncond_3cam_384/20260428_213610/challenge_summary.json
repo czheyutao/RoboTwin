@@ -1,0 +1,106 @@
+{
+  "overall_success_rate": null,
+  "eval_num_episodes": 50,
+  "tasks": [
+    {
+      "task_name": "move_stapler_pad",
+      "success_rate": null,
+      "status": "dry_run",
+      "error": "",
+      "result_file": "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset/robotwin_uncond_3cam_384/20260428_213610/move_stapler_pad/_result_random.txt",
+      "log_file": "",
+      "scoring_rule": "RoboTwin 原始 check_success 二值成功率",
+      "eval_num_episodes": 50
+    },
+    {
+      "task_name": "place_fan",
+      "success_rate": null,
+      "status": "dry_run",
+      "error": "",
+      "result_file": "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset/robotwin_uncond_3cam_384/20260428_213610/place_fan/_result_random.txt",
+      "log_file": "",
+      "scoring_rule": "RoboTwin 原始 check_success 二值成功率",
+      "eval_num_episodes": 50
+    },
+    {
+      "task_name": "handover_mic",
+      "success_rate": null,
+      "status": "dry_run",
+      "error": "",
+      "result_file": "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset/robotwin_uncond_3cam_384/20260428_213610/handover_mic/_result_random.txt",
+      "log_file": "",
+      "scoring_rule": "RoboTwin 原始 check_success 二值成功率",
+      "eval_num_episodes": 50
+    },
+    {
+      "task_name": "open_microwave",
+      "success_rate": null,
+      "status": "dry_run",
+      "error": "",
+      "result_file": "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset/robotwin_uncond_3cam_384/20260428_213610/open_microwave/_result_random.txt",
+      "log_file": "",
+      "scoring_rule": "RoboTwin 原始 check_success 二值成功率",
+      "eval_num_episodes": 50
+    },
+    {
+      "task_name": "place_can_basket",
+      "success_rate": null,
+      "status": "dry_run",
+      "error": "",
+      "result_file": "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset/robotwin_uncond_3cam_384/20260428_213610/place_can_basket/_result_random.txt",
+      "log_file": "",
+      "scoring_rule": "RoboTwin 原始 check_success 二值成功率",
+      "eval_num_episodes": 50
+    },
+    {
+      "task_name": "place_dual_shoes",
+      "success_rate": null,
+      "status": "dry_run",
+      "error": "",
+      "result_file": "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset/robotwin_uncond_3cam_384/20260428_213610/place_dual_shoes/_result_random.txt",
+      "log_file": "",
+      "scoring_rule": "RoboTwin 原始 check_success 二值成功率",
+      "eval_num_episodes": 50
+    },
+    {
+      "task_name": "move_can_pot",
+      "success_rate": null,
+      "status": "dry_run",
+      "error": "",
+      "result_file": "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset/robotwin_uncond_3cam_384/20260428_213610/move_can_pot/_result_random.txt",
+      "log_file": "",
+      "scoring_rule": "RoboTwin 原始 check_success 二值成功率",
+      "eval_num_episodes": 50
+    },
+    {
+      "task_name": "stack_blocks_three",
+      "success_rate": null,
+      "status": "dry_run",
+      "error": "",
+      "result_file": "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset/robotwin_uncond_3cam_384/20260428_213610/stack_blocks_three/_result_random.txt",
+      "log_file": "",
+      "scoring_rule": "RoboTwin 原始 check_success 二值成功率",
+      "eval_num_episodes": 50
+    },
+    {
+      "task_name": "blocks_ranking_rgb",
+      "success_rate": null,
+      "status": "dry_run",
+      "error": "",
+      "result_file": "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset/robotwin_uncond_3cam_384/20260428_213610/blocks_ranking_rgb/_result_random.txt",
+      "log_file": "",
+      "scoring_rule": "RoboTwin 原始 check_success 二值成功率",
+      "eval_num_episodes": 50
+    },
+    {
+      "task_name": "blocks_ranking_size",
+      "success_rate": null,
+      "status": "dry_run",
+      "error": "",
+      "result_file": "/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset/robotwin_uncond_3cam_384/20260428_213610/blocks_ranking_size/_result_random.txt",
+      "log_file": "",
+      "scoring_rule": "RoboTwin 原始 check_success 二值成功率",
+      "eval_num_episodes": 50
+    }
+  ]
+}

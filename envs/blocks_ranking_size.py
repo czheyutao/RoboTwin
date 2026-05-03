@@ -1,3 +1,13 @@
+"""
+脚本作用：定义按大小排序积木任务，并提供挑战评测所需的 20/60/100 部分得分规则。
+执行命令示例：
+python script/eval_fastwam_challenge_subset.py \
+  --ckpt third_party/FastWAM/checkpoints/fastwam_release/robotwin_uncond_3cam_384.pt \
+  --dataset-stats-path third_party/FastWAM/checkpoints/fastwam_release/robotwin_uncond_3cam_384_dataset_stats.json \
+  --eval-num-episodes 50 \
+  --gpu-id 0
+"""
+
 from ._base_task import Base_Task
 from .utils import *
 import sapien
@@ -156,3 +166,24 @@ class blocks_ranking_size(Base_Task):
         return (np.all(abs(block1_pose[:2] - block2_pose[:2]) < eps)
                 and np.all(abs(block2_pose[:2] - block3_pose[:2]) < eps) and block1_pose[0] < block2_pose[0]
                 and block2_pose[0] < block3_pose[0] and self.is_left_gripper_open() and self.is_right_gripper_open())
+
+    def get_eval_score(self):
+        if self.check_success():
+            return 1.0
+
+        eps = np.array([0.13, 0.03])
+
+        def placed(block, target_pose):
+            block_pose = block.get_pose().p
+            return bool(np.all(abs(block_pose[:2] - np.array(target_pose[:2])) < eps))
+
+        first_done = placed(self.block1, self.block1_target_pose)
+        second_done = first_done and placed(self.block2, self.block2_target_pose)
+        third_done = second_done and placed(self.block3, self.block3_target_pose)
+        if third_done:
+            return 1.0
+        if second_done:
+            return 0.6
+        if first_done:
+            return 0.2
+        return 0.0

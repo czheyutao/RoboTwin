@@ -1,0 +1,90 @@
+/data/hyt/anaconda3/envs/fastwam_robotwin/lib/python3.10/site-packages/sapien/__init__.py:2: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+[32mRender Well[0m
+============= Config =============
+
+[95mMessy Table:[0m True
+[95mRandom Background:[0m True
+ - Clean Background Rate: 0.02
+[95mRandom Light:[0m True
+ - Crazy Random Light Rate: 0.02
+[95mRandom Table Height:[0m 0.03
+[95mRandom Head Camera Distance:[0m 0
+[94mHead Camera Config:[0m D435, True
+[94mWrist Camera Config:[0m D435, True
+[94mEmbodiment Config:[0m aloha-agilex
+
+==================================
+[INFO] [fastwam.models.wan22.helpers.loader] Loading Wan2.2-TI2V-5B components...
+[INFO] [fastwam.models.wan22.helpers.loader] Skipping pretrained video DiT load (`skip_dit_load_from_pretrain=True`); initializing video expert randomly and expecting checkpoint override.
+[INFO] [fastwam.models.wan22.helpers.loader] Finished loading Wan2.2-TI2V-5B components in 73.55 seconds.
+[INFO] [fastwam.models.wan22.action_dit] Skipping ActionDiT pretrained load (`skip_dit_load_from_pretrain=True`); initializing action expert randomly and expecting checkpoint override.
+[INFO] [fastwam.models.wan22.mot] Initialized MoT with experts: ['video', 'action'], num_layers=30
+[INFO] [fastwam.models.wan22.mot]   Expert 'video': num_params=5.00 B
+[INFO] [fastwam.models.wan22.mot]   Expert 'action': num_params=1.02 B
+[34mTask Name: click_alarmclock[0m
+[34mPolicy Name: fastwam_policy[0m
+Warp DeprecationWarning: The symbol `warp.torch.device_from_torch` will soon be removed from the public API. Use `warp.device_from_torch` instead.
+step: [92m1 / 400[0m
+step: [92m2 / 400[0m
+step: [92m3 / 400[0m
+step: [92m4 / 400[0m
+step: [92m5 / 400[0m
+step: [92m6 / 400[0m
+step: [92m7 / 400[0m
+step: [92m8 / 400[0m
+step: [92m9 / 400[0m
+step: [92m10 / 400[0m
+step: [92m11 / 400[0m
+step: [92m12 / 400[0m
+step: [92m13 / 400[0m
+step: [92m14 / 400[0m
+step: [92m15 / 400[0m
+step: [92m16 / 400[0m
+step: [92m17 / 400[0m
+step: [92m18 / 400[0m
+step: [92m19 / 400[0m
+step: [92m20 / 400[0m
+step: [92m21 / 400[0m
+step: [92m22 / 400[0m
+step: [92m23 / 400[0m
+step: [92m24 / 400[0m
+step: [92m25 / 400[0m
+step: [92m26 / 400[0m
+step: [92m27 / 400[0m
+step: [92m28 / 400[0m
+step: [92m29 / 400[0m
+step: [92m30 / 400[0m
+step: [92m31 / 400[0m
+step: [92m32 / 400[0m
+step: [92m33 / 400[0m
+step: [92m34 / 400[0m
+step: [92m35 / 400[0m
+step: [92m36 / 400[0m
+step: [92m37 / 400[0m
+step: [92m38 / 400[0m
+step: [92m39 / 400[0m
+step: [92m40 / 400[0m
+step: [92m41 / 400[0m
+step: [92m42 / 400[0m
+step: [92m43 / 400[0m
+step: [92m44 / 400[0m
+step: [92m45 / 400[0m
+step: [92m46 / 400[0m
+step: [92m47 / 400[0m
+step: [92m48 / 400[0m
+step: [92m49 / 400[0m
+step: [92m50 / 400[0m
+step: [92m51 / 400[0m
+step: [92m52 / 400[0m
+step: [92m53 / 400[0m
+step: [92m54 / 400[0m
+step: [92m55 / 400[0m
+step: [92m56 / 400[0m
+[rawvideo @ 0x55fc410894c0] Invalid buffer size, packet size 230400 < expected frame_size 921600
+Error while decoding stream #0:0: Invalid argument
+[92mSuccess![0m
+[93mclick_alarmclock[0m | [94mfastwam_policy[0m | [92mdemo_randomized[0m | [91m/data/hyt/RoboTwin/third_party/FastWAM/checkpoints/fastwam_release/robotwin_uncond_3cam_384.pt[0m
+Success rate: [96m1/1[0m => [95m100.0%[0m, current seed: [90m100000[0m
+
+Data has been saved to /data/hyt/RoboTwin/evaluate_results/fastwam/robotwin_uncond_3cam_384/20260427_164757/click_alarmclock/_result_random.txt

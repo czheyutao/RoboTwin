@@ -1,0 +1,5 @@
+task_name,success_rate,status,result_file,log_file,scoring_rule
+move_stapler_pad,0.7,ok,/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset/robotwin_uncond_3cam_384/20260428_213615/move_stapler_pad/_result_random.txt,/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset/robotwin_uncond_3cam_384/20260428_213615/move_stapler_pad/eval_move_stapler_pad_demo_randomized_20260428_213615.log,RoboTwin 原始 check_success 二值成功率
+place_fan,0.96,ok,/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset/robotwin_uncond_3cam_384/20260428_213615/place_fan/_result_random.txt,/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset/robotwin_uncond_3cam_384/20260428_213615/place_fan/eval_place_fan_demo_randomized_20260428_224428.log,RoboTwin 原始 check_success 二值成功率
+handover_mic,1.0,ok,/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset/robotwin_uncond_3cam_384/20260428_213615/handover_mic/_result_random.txt,/data/hyt/RoboTwin/evaluate_results/fastwam_challenge_subset/robotwin_uncond_3cam_384/20260428_213615/handover_mic/eval_handover_mic_demo_randomized_20260428_234505.log,RoboTwin 原始 check_success 二值成功率
+__overall__,0.8866666666666667,,,,

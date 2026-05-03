@@ -1,3 +1,17 @@
+"""
+脚本作用：定义 RoboTwin 基础任务环境，并在评测时把 head/left/right 三路相机画面写入视频。
+执行命令示例：
+python script/eval_fastwam_single.py \
+  --ckpt third_party/FastWAM/checkpoints/fastwam_release/robotwin_uncond_3cam_384.pt \
+  --dataset-stats-path third_party/FastWAM/checkpoints/fastwam_release/robotwin_uncond_3cam_384_dataset_stats.json \
+  --task-name click_alarmclock \
+  --task-config demo_randomized \
+  --instruction-type unseen \
+  --eval-num-episodes 1 \
+  --gpu-id 0 \
+  --no-skip-get-obs-within-replan
+"""
+
 import os
 import re
 import sapien.core as sapien
@@ -574,6 +588,50 @@ class Base_Task(gym.Env):
 
     def _set_eval_video_ffmpeg(self, ffmpeg):
         self.eval_video_ffmpeg = ffmpeg
+
+    def _get_eval_video_rgb_frame(self):
+        def as_rgb_uint8(camera_name):
+            camera_data = self.now_obs.get("observation", {}).get(camera_name, {})
+            rgb = camera_data.get("rgb")
+            if rgb is None:
+                return None
+            rgb = np.asarray(rgb)
+            if rgb.ndim != 3 or rgb.shape[2] < 3:
+                raise ValueError(f"Eval video camera `{camera_name}` has invalid rgb shape: {rgb.shape}")
+            rgb = rgb[:, :, :3]
+            if rgb.dtype != np.uint8:
+                rgb = np.clip(rgb, 0, 255).astype(np.uint8)
+            return np.ascontiguousarray(rgb)
+
+        head_rgb = as_rgb_uint8("head_camera")
+        if head_rgb is None:
+            raise KeyError("Eval video requires `head_camera.rgb` in current observation.")
+
+        left_rgb = as_rgb_uint8("left_camera")
+        right_rgb = as_rgb_uint8("right_camera")
+        if left_rgb is None and right_rgb is None:
+            return head_rgb
+        if left_rgb is None:
+            left_rgb = np.zeros_like(right_rgb)
+        if right_rgb is None:
+            right_rgb = np.zeros_like(left_rgb)
+
+        head_h, head_w = head_rgb.shape[:2]
+        left_h, left_w = left_rgb.shape[:2]
+        right_h, right_w = right_rgb.shape[:2]
+        wrist_h = max(left_h, right_h)
+        video_w = max(head_w, left_w + right_w)
+        video_h = head_h + wrist_h
+
+        frame = np.zeros((video_h, video_w, 3), dtype=np.uint8)
+        head_x = (video_w - head_w) // 2
+        frame[:head_h, head_x:head_x + head_w] = head_rgb
+        frame[head_h:head_h + left_h, :left_w] = left_rgb
+        frame[head_h:head_h + right_h, left_w:left_w + right_w] = right_rgb
+        return np.ascontiguousarray(frame)
+
+    def get_eval_score(self):
+        return float(self.check_success())
 
     def close_env(self, clear_cache=False):
         if clear_cache:
@@ -1482,7 +1540,7 @@ class Base_Task(gym.Env):
 
         eval_video_freq = 1  # fixed
         if (self.eval_video_path is not None and self.take_action_cnt % eval_video_freq == 0):
-            self.eval_video_ffmpeg.stdin.write(self.now_obs["observation"]["head_camera"]["rgb"].tobytes())
+            self.eval_video_ffmpeg.stdin.write(self._get_eval_video_rgb_frame().tobytes())
 
         self.take_action_cnt += 1
         print(f"step: \033[92m{self.take_action_cnt} / {self.step_lim}\033[0m", end="\r")
@@ -1658,7 +1716,7 @@ class Base_Task(gym.Env):
                 self.eval_success = True
                 self.get_obs() # update obs
                 if (self.eval_video_path is not None):
-                    self.eval_video_ffmpeg.stdin.write(self.now_obs["observation"]["head_camera"]["rgb"].tobytes())
+                    self.eval_video_ffmpeg.stdin.write(self._get_eval_video_rgb_frame().tobytes())
                 return
 
         self._update_render()
