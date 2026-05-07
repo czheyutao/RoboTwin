@@ -9,6 +9,17 @@ python script/eval_fastwam_single.py \
   --eval-num-episodes 1 \
   --gpu-id 0 \
   --no-eval-video-log
+
+命令示例：
+python script/eval_fastwam_single.py \
+  --ckpt third_party/FastWAM/checkpoints/fastwam_trained/step_010000.pt \
+  --dataset-stats-path third_party/FastWAM/checkpoints/fastwam_trained/dataset_stats.json \
+  --task-name place_fan \
+  --task-config demo_randomized \
+  --eval-num-episodes 50 \
+  --gpu-id 0 \
+  --video-dit-num-layers 16 \
+  --action-dit-num-layers 16
 """
 
 from __future__ import annotations
@@ -113,6 +124,8 @@ def _parse_args() -> argparse.Namespace:
     parser.add_argument("--text-cfg-scale", type=float, default=1.0)
     parser.add_argument("--negative-prompt", default="")
     parser.add_argument("--rand-device", default="cpu")
+    parser.add_argument("--video-dit-num-layers", type=int, default=None)
+    parser.add_argument("--action-dit-num-layers", type=int, default=None)
     parser.add_argument("--tiled", action="store_true")
     parser.add_argument("--timing-enabled", action="store_true")
     parser.add_argument("--score-mode", action="store_true", help="Use task-specific challenge scoring when available.")
@@ -184,6 +197,8 @@ def main() -> int:
     _append_override(overrides, "text_cfg_scale", args.text_cfg_scale)
     _append_override(overrides, "negative_prompt", args.negative_prompt)
     _append_override(overrides, "rand_device", args.rand_device)
+    _append_override(overrides, "model_video_dit_num_layers", args.video_dit_num_layers)
+    _append_override(overrides, "model_action_dit_num_layers", args.action_dit_num_layers)
     _append_override(overrides, "tiled", args.tiled)
     _append_override(overrides, "timing_enabled", args.timing_enabled)
     _append_override(overrides, "skip_get_obs_within_replan", args.skip_get_obs_within_replan)

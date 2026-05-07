@@ -14,6 +14,16 @@ python script/eval_fastwam_challenge_subset.py \
   --eval-num-episodes 50 \
   --gpu-id 0 \
   --dry-run
+
+执行命令示例：
+python script/eval_fastwam_challenge_subset.py \
+  --ckpt third_party/FastWAM/checkpoints/fastwam_trained/step_010000.pt \
+  --dataset-stats-path third_party/FastWAM/checkpoints/fastwam_trained/dataset_stats.json \
+  --eval-num-episodes 10 \
+  --gpu-id 0 \
+  --video-dit-num-layers 16 \
+  --action-dit-num-layers 16 \
+  --no-skip-get-obs-within-replan
 """
 
 from __future__ import annotations
@@ -135,13 +145,21 @@ def _parse_args() -> argparse.Namespace:
     parser.add_argument("--text-cfg-scale", type=float, default=1.0)
     parser.add_argument("--negative-prompt", default="")
     parser.add_argument("--rand-device", default="cpu")
+    parser.add_argument("--video-dit-num-layers", type=int, default=None)
+    parser.add_argument("--action-dit-num-layers", type=int, default=None)
+    parser.add_argument(
+        "--skip-get-obs-within-replan",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+        help="为 True 时使用低帧率评测视频；为 False 时保存完整渲染视频。",
+    )
     parser.add_argument("--continue-on-error", action="store_true")
     parser.add_argument("--dry-run", action="store_true")
     return parser.parse_args()
 
 
 def _build_single_cmd(args: argparse.Namespace, *, task_name: str, ckpt: Path, dataset_stats: Path, output_dir: Path) -> list[str]:
-    return [
+    cmd = [
         sys.executable,
         str(SINGLE_ENTRY),
         "--ckpt",
@@ -179,8 +197,16 @@ def _build_single_cmd(args: argparse.Namespace, *, task_name: str, ckpt: Path, d
         "--rand-device",
         args.rand_device,
         "--eval-video-log",
-        "--skip-get-obs-within-replan",
     ]
+    if args.skip_get_obs_within_replan:
+        cmd.append("--skip-get-obs-within-replan")
+    else:
+        cmd.append("--no-skip-get-obs-within-replan")
+    if args.video_dit_num_layers is not None:
+        cmd.extend(["--video-dit-num-layers", str(args.video_dit_num_layers)])
+    if args.action_dit_num_layers is not None:
+        cmd.extend(["--action-dit-num-layers", str(args.action_dit_num_layers)])
+    return cmd
 
 
 def _write_summary(output_dir: Path, records: list[dict[str, Any]]) -> None:
